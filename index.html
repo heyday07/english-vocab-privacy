@@ -20,58 +20,105 @@ li{margin:4px 0}
 </head>
 <body>
 <h1>개인정보 처리방침</h1>
-<p><strong>시행일: 2026년 8월 6일</strong><br><strong>개발사: RedMoon Lab</strong></p>
-<p>RedMoon Lab(이하 "회사")는 「매일매일 영단어」 앱(이하 "앱")을 운영함에 있어 이용자의 개인정보를 소중히 여기며, 「개인정보 보호법」 및 관련 법령을 준수합니다.</p>
+<p><strong>시행일: 2026년 10월 16일</strong> (이전 시행일: 2026년 8월 6일)<br><strong>개발사: RedMoon Lab</strong><br><strong>적용 대상: 「매일매일 영단어」 Android 앱(com.redmoon.english_vocab) 및 iOS 앱(com.redmoon.englishvocab)</strong></p>
+<p>RedMoon Lab(이하 "회사")는 「매일매일 영단어」 앱(이하 "앱")을 운영함에 있어 이용자의 개인정보를 소중히 여기며, 「개인정보 보호법」 및 관련 법령을 준수합니다. 이 방침은 Google Play와 Apple App Store로 배포되는 앱에 함께 적용됩니다.</p>
 
-<h2>1. 수집하는 개인정보</h2>
-<p><strong>본 앱은 이용자의 개인정보를 직접 수집하지 않습니다.</strong></p>
+<h2>1. 수집하는 정보</h2>
+<p><strong>회사는 이름, 이메일, 전화번호 등 이용자를 직접 식별할 수 있는 개인정보를 수집하지 않습니다.</strong></p>
 <ul>
-<li>회원가입이 없습니다.</li>
-<li>이름, 이메일, 전화번호 등 개인 식별 정보를 수집하지 않습니다.</li>
-<li>위치 정보, 연락처, 사진 등에 접근하지 않습니다.</li>
+<li>회원가입·로그인이 없습니다.</li>
+<li>위치 정보, 연락처, 사진, 마이크, 카메라에 접근하지 않습니다.</li>
+<li>다만 앱에 포함된 제3자 서비스(광고·분석·오류 보고, 4항)가 광고 식별자, 기기 정보, 앱 이용 정보를 자동으로 수집할 수 있습니다. 이 정보는 이름·이메일 등과 연결되지 않습니다.</li>
 </ul>
 
 <h2>2. 기기 내 저장 데이터</h2>
-<p>앱은 학습 기능 제공을 위해 다음 데이터를 <strong>이용자의 기기 내부에만</strong> 저장합니다. 이 데이터는 외부 서버로 전송되지 않습니다.</p>
+<p>앱은 학습 기능 제공을 위해 다음 데이터를 <strong>이용자의 기기 내부에만</strong> 저장합니다. 이 데이터는 회사 서버로 전송되지 않습니다.</p>
 <table>
 <tr><th>데이터</th><th>용도</th><th>저장 위치</th></tr>
-<tr><td>학습 진도 (복습 상태, 퀴즈 기록)</td><td>FSRS 간격 반복 학습</td><td>기기 내부 SQLite</td></tr>
-<tr><td>나만의 단어장</td><td>사용자 편의</td><td>기기 내부 SharedPreferences</td></tr>
-<tr><td>XP·스트릭·레벨</td><td>학습 동기부여</td><td>기기 내부 SharedPreferences</td></tr>
-<tr><td>앱 설정 (알림 시간 등)</td><td>사용자 환경 설정</td><td>기기 내부 SharedPreferences</td></tr>
+<tr><td>학습 진도 (복습 상태, 퀴즈 기록, 학습 세션)</td><td>FSRS 간격 반복 학습</td><td>기기 내부 데이터베이스(SQLite)</td></tr>
+<tr><td>나만의 단어장·북마크</td><td>사용자 편의</td><td>기기 내부 설정 저장소(Android SharedPreferences / iOS UserDefaults)</td></tr>
+<tr><td>XP·스트릭·레벨·코인</td><td>학습 동기부여</td><td>기기 내부 설정 저장소</td></tr>
+<tr><td>앱 설정 (테마, 알림 시간, 발음 속도 등)</td><td>사용자 환경 설정</td><td>기기 내부 설정 저장소</td></tr>
+<tr><td>이용권 적용 기간(만료일)</td><td>광고 제거·프리미엄 기능 적용</td><td>기기 내부 설정 저장소</td></tr>
 </table>
-<p>앱을 삭제하면 위 데이터는 모두 자동으로 삭제됩니다.</p>
+<p>앱의 백업(내보내기) 기능을 사용하면 학습 기록 파일이 이용자가 직접 고른 위치(파일 앱, 메신저 등)로 저장·공유되며, 회사는 이 파일을 전달받지 않습니다. 백업 복원이나 나만의 단어장 가져오기에서는 이용자가 직접 고른 파일만 읽습니다.</p>
+<p>앱을 삭제하면 기기에 저장된 데이터가 모두 삭제됩니다.</p>
 
-<h2>3. 제3자 서비스</h2>
-<p>본 앱은 다음의 제3자 서비스를 사용합니다. 각 서비스의 개인정보 처리방침을 참고하시기 바랍니다.</p>
-<h3>3-1. Google AdMob (광고)</h3>
+<h2>3. 권한</h2>
+<table>
+<tr><th>권한</th><th>목적</th><th>필수 여부</th></tr>
+<tr><td>알림 (Android: POST_NOTIFICATIONS / iOS: 알림 권한)</td><td>이용자가 설정한 시각의 학습 알림(기기 내에서 예약되는 로컬 알림)</td><td>선택 — 거부해도 학습 기능은 모두 사용할 수 있습니다</td></tr>
+<tr><td>인터넷</td><td>광고 표시, 오류 보고·이용 통계 전송</td><td>학습 자체는 오프라인에서 동작합니다</td></tr>
+<tr><td>광고 식별자 사용 (Android: 광고 ID / iOS: 앱 추적 허용(ATT))</td><td>맞춤형 광고 및 광고 성과 측정</td><td>선택 — iOS에서는 첫 실행 후 허용 여부를 묻는 창이 표시되며, 허용하지 않아도 앱의 모든 기능을 사용할 수 있습니다</td></tr>
+</table>
+<p>iOS에서 파일을 고르는 화면에 사진 보관함이 함께 표시될 수 있으나, 앱은 사진을 읽거나 저장하지 않습니다.</p>
+
+<h2>4. 제3자 서비스</h2>
+<p>본 앱은 다음의 제3자 서비스를 사용합니다. 각 서비스는 해당 회사의 개인정보 처리방침에 따라 운영됩니다.</p>
+
+<h3>4-1. Google AdMob (광고)</h3>
 <ul>
-<li>목적: 앱 내 광고 표시</li>
-<li>수집 정보: 광고 식별자(GAID), 기기 정보, 앱 사용 데이터</li>
+<li>목적: 앱 내 광고 표시(배너·전면·보상형)</li>
+<li>수집 정보: 광고 식별자(Android AAID / iOS IDFA), IP 주소, 기기 정보, 광고 상호작용 데이터</li>
+<li>처리방침: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+</ul>
+<p>유럽경제지역(EEA)·영국 등에서는 광고 표시 전에 Google UMP(사용자 메시지 플랫폼)를 통해 동의를 받으며, 동의하지 않으면 비개인화 광고가 표시됩니다.</p>
+
+<h3>4-2. Firebase Analytics (이용 통계)</h3>
+<ul>
+<li>목적: 앱 이용 현황(화면 조회, 기능 사용 횟수 등) 집계와 앱 개선</li>
+<li>수집 정보: 앱 이용 이벤트, 앱 인스턴스 ID, 기기 모델·OS 버전·앱 버전, IP 기반의 대략적인 지역</li>
 <li>처리방침: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
 </ul>
 
-<h2>4. 아동의 개인정보</h2>
-<p>본 앱은 만 14세 미만 아동의 개인정보를 수집하지 않습니다. 앱 자체가 개인정보를 수집하지 않으므로 아동 보호에 관한 별도 조치가 필요하지 않습니다.</p>
-
-<h2>5. 개인정보의 제3자 제공</h2>
-<p>회사는 이용자의 개인정보를 제3자에게 제공하지 않습니다. 다만, 위 3항에 명시된 제3자 서비스(Google)가 자체 정책에 따라 정보를 처리할 수 있습니다.</p>
-
-<h2>6. 이용자의 권리</h2>
+<h3>4-3. Firebase Crashlytics (오류 보고)</h3>
 <ul>
-<li>앱 삭제 시 기기 내 모든 학습 데이터가 삭제됩니다.</li>
-<li>Google 광고 설정에서 맞춤 광고를 비활성화할 수 있습니다.<br>(설정 → Google → 광고 → 광고 맞춤설정 선택 해제)</li>
+<li>목적: 앱 오류(크래시) 원인 분석과 안정성 개선</li>
+<li>수집 정보: 오류 로그, 기기 모델·OS 버전·앱 버전, 설치 식별자</li>
+<li>처리방침: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
 </ul>
 
-<h2>7. 개인정보 처리방침 변경</h2>
-<p>본 방침은 시행일로부터 적용되며, 변경 시 앱 업데이트 또는 앱 내 공지를 통해 안내합니다.</p>
+<h3>4-4. 인앱 결제 (프리미엄 이용권)</h3>
+<p>앱에서는 광고 제거와 학습 기능 확장을 위한 월간·연간 이용권(자동 갱신되지 않는 1회성 상품)을 판매합니다. 결제는 Android에서는 Google Play 결제, iOS에서는 Apple 인앱 결제로 처리되며, 회사는 결제 카드 정보와 이용자의 계정 정보를 전달받지 않습니다. 구매한 이용권의 적용 기간은 이용자의 기기 안에만 저장됩니다.</p>
 
-<h2>8. 문의처</h2>
-<p>개인정보 관련 문의사항은 아래로 연락해 주시기 바랍니다.</p>
+<h3>4-5. Google Play 앱 업데이트 (Android)</h3>
+<p>Android에서는 Google Play의 인앱 업데이트 기능으로 새 버전을 안내합니다. 이를 위해 Google Play가 설치된 앱의 버전 정보를 확인할 수 있습니다.</p>
+
+<h3>4-6. 음성 읽기 (TTS)</h3>
+<p>단어·예문 읽어 주기는 이용자 기기에 내장된 음성 합성 기능을 사용하며, 회사는 음성 데이터를 수집하거나 저장하지 않습니다.</p>
+
+<p>회사의 서버는 없으며, 위 서비스를 운영하는 Google 등은 해외(미국 등)에 서버를 두고 있어 정보가 국외에서 처리·보관될 수 있습니다.</p>
+
+<h2>5. 광고 맞춤 설정과 앱 추적 투명성(iOS)</h2>
+<p>iOS에서는 앱을 처음 실행한 후 '추적 허용' 여부를 묻는 창이 표시됩니다. 허용하면 광고 식별자(IDFA)로 맞춤형 광고와 광고 성과 측정이 이루어지고, 허용하지 않으면 맞춤형 광고에 사용되지 않습니다. 이 선택은 앱 사용 가능 여부에 영향을 주지 않으며, 언제든지 <strong>설정 → 개인정보 보호 및 보안 → 추적</strong>에서 변경할 수 있습니다.</p>
+
+<h2>6. 아동의 개인정보</h2>
+<p>본 앱은 만 14세 미만(한국) 및 만 13세 미만(그 외 국가) 아동을 대상으로 하지 않으며, 아동의 개인정보를 고의로 수집하지 않습니다. 아동의 정보가 수집되었다고 판단되면 아래 이메일로 알려 주시기 바랍니다.</p>
+
+<h2>7. 개인정보의 제3자 제공</h2>
+<p>회사는 이용자의 개인정보를 제3자에게 제공하지 않습니다. 다만, 위 4항에 명시된 제3자 서비스(Google)가 자체 정책에 따라 정보를 처리할 수 있습니다.</p>
+
+<h2>8. 이용자의 권리와 선택</h2>
+<ul>
+<li>앱 삭제 시 기기 내 모든 데이터가 삭제됩니다.</li>
+<li>맞춤 광고 끄기·광고 식별자 재설정<br>
+[Android] 설정 → Google → 광고 (광고 ID 재설정·삭제, 광고 맞춤설정 선택 해제)<br>
+[iOS] 설정 → 개인정보 보호 및 보안 → 추적 (앱의 추적 허용 해제), 설정 → 개인정보 보호 및 보안 → Apple 광고(맞춤형 광고 끄기)</li>
+<li>Firebase 이용 통계·오류 보고 데이터의 삭제 등 개인정보 관련 요청은 아래 이메일로 보내 주세요.</li>
+</ul>
+
+<h2>9. 개인정보 처리방침 변경</h2>
+<p>본 방침은 시행일로부터 적용되며, 변경 시 이 페이지에 개정본과 시행일을 게시하고, 중요한 변경은 앱 업데이트 또는 스토어 등록정보를 통해 안내합니다.</p>
+
+<h2>10. 문의처</h2>
+<p>앱에 대한 문의와 개인정보 관련 요청은 아래로 연락해 주시기 바랍니다.</p>
 <ul>
 <li><strong>개발사</strong>: RedMoon Lab</li>
 <li><strong>이메일</strong>: <a href="mailto:teamstar13000@gmail.com">teamstar13000@gmail.com</a></li>
 </ul>
+
+<h2>Summary (English)</h2>
+<p>This policy covers the Android and iOS versions of "매일매일 영단어" (Daily English Vocabulary) by RedMoon Lab. The app has no account or sign-in and does not collect your name, email address or phone number. Study progress, word lists, bookmarks and settings are stored only on your device. The app uses Google AdMob (advertising identifier: Android AAID / iOS IDFA; consent via Google UMP in the EEA/UK, and the App Tracking Transparency prompt on iOS), Firebase Analytics (aggregated usage events) and Firebase Crashlytics (crash reports). Premium passes are one-time, non-renewing purchases handled by Google Play Billing or Apple In-App Purchase; we never receive card details. On iOS you can change tracking permission at any time in Settings &rarr; Privacy &amp; Security &rarr; Tracking. The app is not directed to children. Contact: <a href="mailto:teamstar13000@gmail.com">teamstar13000@gmail.com</a>.</p>
 
 <div class="footer">© 2026 RedMoon Lab. All rights reserved.</div>
 </body>
